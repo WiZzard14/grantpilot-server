@@ -1,0 +1,21 @@
+import { Router } from "express";
+import { authRouter } from "./auth.routes.js";
+import { scholarshipRouter } from "./scholarship.routes.js";
+import { profileRouter } from "./profile.routes.js";
+import { savedRouter } from "./saved.routes.js";
+import { aiRouter } from "./ai.routes.js";
+import { documentRouter } from "./document.routes.js";
+import { chatRouter } from "./chat.routes.js";
+import { contentRouter } from "./content.routes.js";
+import { dashboardRouter } from "./dashboard.routes.js";
+
+export const apiRouter = Router();
+apiRouter.use("/auth", authRouter);
+apiRouter.use("/scholarships", scholarshipRouter);
+apiRouter.use("/profile", profileRouter);
+apiRouter.use("/saved", savedRouter);
+apiRouter.use("/ai", aiRouter);
+apiRouter.use("/documents", documentRouter);
+apiRouter.use("/chat", chatRouter);
+apiRouter.use("/content", contentRouter);
+apiRouter.use("/dashboard", dashboardRouter);
